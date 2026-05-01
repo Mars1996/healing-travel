@@ -111,7 +111,7 @@ func _do_cuddle(delta: float) -> void:
 func _do_petted(delta: float) -> void:
 	pet_reaction_timer += delta
 	# Happy bounce
-	var bounce := abs(sin(pet_reaction_timer * 8.0)) * -3.0
+	var bounce: float = abs(sin(pet_reaction_timer * 8.0)) * -3.0
 	$Sprite2D.position.y = bounce
 	velocity = Vector2.ZERO
 
